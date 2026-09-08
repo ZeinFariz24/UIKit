@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kebijakan Privasi — UI KIT</title>
+  <meta name="description" content="Kebijakan Privasi UI KIT — bagaimana situs demo ini memperlakukan data, penyimpanan lokal, dan sumber daya pihak ketiga.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tema dark/light/auto diterapkan oleh bundel JS (blok color-mode M2) -->
+  <link href="dist/css/uikit.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg uk-navbar sticky-top" data-navbar>
+    <div class="container">
+      <a class="navbar-brand" href="landing.html">
+        <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+        <span class="uk-brand-text">UI<span class="text-gradient"> KIT</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fitur">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Dokumentasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Mulai</a></li>
+          <li class="nav-item"><a class="nav-link text-gradient" href="login.html"><i class="fa-solid fa-right-to-bracket me-1"></i>Masuk</a></li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mode tampilan" title="Mode tampilan">
+              <i class="fa-solid fa-sun theme-icon-active"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><h6 class="dropdown-header">Pilih Mode</h6></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="fa-solid fa-sun me-2"></i>Light</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="fa-solid fa-moon me-2"></i>Dark</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="auto"><i class="fa-solid fa-cloud-sun me-2"></i>Auto (Sistem)</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+    <div class="uk-container py-5">
+      <div class="row justify-content-center">
+        <div class="col-xl-9 col-xxl-8">
+
+          <div class="text-center mb-5">
+            <a href="landing.html" class="small fw-semibold text-primary"><i class="fa-solid fa-arrow-left me-1"></i>Kembali ke Beranda</a>
+            <div class="uk-dialog-icon mt-4 mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+            <h1 class="h2 fw-black mb-1">Kebijakan Privasi</h1>
+            <p class="text-muted mb-0">UI KIT — Admin Proyek Lapangan</p>
+            <div class="small text-muted mt-3">
+              <span class="me-3"><i class="fa-solid fa-calendar-day me-1"></i>Terakhir diperbarui: 5 September 2026</span>
+              <span><i class="fa-solid fa-envelope me-1"></i>halo@uikit-demo.id</span>
+            </div>
+          </div>
+
+          <section class="mb-5">
+            <p>Kebijakan Privasi ini menjelaskan bagaimana situs <strong>UI KIT</strong> (&ldquo;kami&rdquo;, &ldquo;kami miliki&rdquo;) memperlakukan data saat Anda mengunjungi dan menggunakan situs demo ini. Situs ini merupakan <strong>purwarupa (demo) antarmuka</strong> untuk kebutuhan &ldquo;Admin Proyek Lapangan&rdquo; dan bukan layanan berlangganan atau aplikasi produksi yang memproses data pengguna.</p>
+            <p class="mb-0">Dengan mengakses situs ini, Anda dianggap telah membaca dan memahami kebijakan di bawah ini. Bila Anda tidak setuju, silakan berhenti menggunakan situs ini.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="ringkasan">1. Ringkasan</h2>
+            <ul class="mb-0">
+              <li>Situs berjalan <strong>sepenuhnya di peramban Anda</strong> (berkas statis HTML/CSS/JS) dan <strong>tidak memiliki server, basis data, maupun akun pengguna</strong>.</li>
+              <li>Formulir pada halaman (masuk, daftar, lupa kata sandi, newsletter, pencarian) adalah <strong>demo</strong>: data yang diketik <strong>tidak dikirim ke mana pun</strong> dan tidak meninggalkan perangkat Anda.</li>
+              <li>Satu-satunya hal yang kami simpan adalah <strong>preferensi tampilan</strong> (mode terang/gelap/otomatis) di penyimpanan lokal peramban.</li>
+              <li>Kami <strong>tidak menggunakan cookie pelacakan, analitik, maupun iklan</strong>.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="formulir">2. Data yang Anda ketik pada formulir demo</h2>
+            <p>Halaman ini menampilkan komponen formulir untuk keperluan demonstrasi desain. Seluruh formulir bersifat <code>novalidate</code> dan tidak tersambung ke layanan apa pun, sehingga:</p>
+            <ul class="mb-0">
+              <li>Alamat email, nama, kata sandi, atau isian lain yang Anda ketik <strong>tidak dikirim, disimpan, atau dibaca oleh pihak mana pun</strong>, termasuk kami.</li>
+              <li>Kata sandi yang Anda ketik hanya tampil di kolom isian pada perangkat Anda dan hilang saat halaman dimuat ulang.</li>
+              <li>Kami menyarankan agar Anda <strong>tidak memasukkan data pribadi asli atau sensitif</strong> pada situs demo ini.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="lokal">3. Data yang tersimpan di perangkat Anda</h2>
+            <p>Situs ini memakai <strong>Penyimpanan Lokal (localStorage)</strong> peramban hanya untuk satu kunci:</p>
+            <ul class="mb-0">
+              <li><code>theme</code> — menyimpan pilihan mode tampilan Anda: <code>light</code>, <code>dark</code>, atau <code>auto</code>. Tanpa kunci ini, situs mengikuti preferensi sistem perangkat Anda.</li>
+            </ul>
+            <p class="mt-3 mb-0">Interaksi lain pada halaman demo (misalnya catatan cepat, papan kanban, coretan papan tulis, atau komponen interaktif) hanya berada <strong>di dalam memori halaman (DOM)</strong> dan akan hilang saat halaman dimuat ulang atau ditutup — tidak ada yang dicatat secara permanen.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="tidak-dikumpulkan">4. Data yang tidak kami kumpulkan</h2>
+            <p>Karena situs ini statis dan tanpa server, kami <strong>tidak</strong> mengumpulkan:</p>
+            <ul class="mb-0">
+              <li>Alamat IP, lokasi, atau informasi perangkat dari log server (tidak ada log server).</li>
+              <li>Riwayat penelusuran atau perilaku pengunjung (tanpa analitik pihak ketiga).</li>
+              <li>Cookie pelacakan lintas situs, profil iklan, maupun penargetan pemasaran.</li>
+              <li>Data kontak atau identitas Anda dalam bentuk apa pun.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="pihak-ketiga">5. Sumber daya pihak ketiga</h2>
+            <p class="mb-0">Situs demo ini <strong>sepenuhnya mandiri (offline-safe)</strong> — seluruh sumber daya dimuat dari direktori lokal situs sendiri, tanpa permintaan keluar ke layanan pihak ketiga:</p>
+            <ul class="mb-0 mt-2">
+              <li><strong>Pustaka</strong> — Bootstrap, FontAwesome, dan AOS di-hosting lokal di folder <code>dist</code>.</li>
+              <li><strong>Jenis huruf</strong> — Montserrat (variable) di-hosting lokal di <code>assets/fonts</code>; tidak ada komunikasi dengan <code>fonts.googleapis.com</code>.</li>
+              <li><strong>Gambar contoh</strong> — SVG placeholder lokal di <code>assets/img</code> (bukan <code>picsum.photos</code>).</li>
+              <li><strong>Media contoh</strong> — video &amp; audio lokal di <code>assets/media</code> (bukan <code>w3schools.com</code>/<code>soundhelix.com</code>).</li>
+            </ul>
+            <p class="mt-3 mb-0">Satu-satunya penyimpanan lokal adalah <code>localStorage</code> untuk preferensi tema (lihat bagian 3) — tidak ada data yang dikirim ke server mana pun.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="cookie">6. Cookie</h2>
+            <p class="mb-0">Situs ini <strong>tidak memasang cookie</strong>. Satu-satunya mekanisme penyimpanan adalah <code>localStorage</code> untuk preferensi tema (lihat bagian 3), yang tidak dikirim ke server mana pun dan dapat Anda hapus kapan saja melalui pengaturan peramban.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="keamanan">7. Keamanan</h2>
+            <p class="mb-0">Karena tidak ada data yang dikirim atau disimpan di sisi kami, risiko utama penggunaan situs ini terbatas pada perangkat Anda sendiri. Kami tetap menyarankan praktik aman standar: perbarui peramban Anda, jangan isi informasi sensitif pada situs demo, dan bersihkan data situs melalui pengaturan peramban bila diinginkan.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="hak-anda">8. Hak Anda</h2>
+            <p>Anda berhak untuk:</p>
+            <ul class="mb-0">
+              <li><strong>Mengetahui</strong> data apa yang diproses — dijelaskan pada kebijakan ini.</li>
+              <li><strong>Menghapus</strong> seluruh data lokal situs kapan saja melalui menu pengaturan peramban (hapus data situs / localStorage).</li>
+              <li><strong>Menolak</strong> pemuatan aset pihak ketiga dengan memblokir domain terkait atau menggunakan salinan offline.</li>
+            </ul>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="anak">9. Privasi anak-anak</h2>
+            <p class="mb-0">Situs ini tidak ditujukan kepada anak-anak di bawah 13 tahun dan tidak dengan sengaja mengumpulkan data apa pun dari anak-anak. Karena tidak ada pengumpulan data sama sekali, tidak ada data anak yang dapat kami proses atau simpan.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="perubahan">10. Perubahan kebijakan</h2>
+            <p class="mb-0">Kebijakan ini dapat diperbarui sewaktu-waktu seiring perubahan situs. Tanggal &ldquo;Terakhir diperbarui&rdquo; di bagian atas halaman akan selalu menunjukkan versi terkini. Perubahan berlaku sejak dipublikasikan pada halaman ini.</p>
+          </section>
+
+          <section class="mb-5">
+            <h2 class="h5 fw-bold mb-3" id="kontak">11. Kontak</h2>
+            <p>Jika Anda memiliki pertanyaan mengenai kebijakan privasi ini, silakan hubungi kami melalui:</p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><i class="fa-solid fa-envelope me-2 text-primary"></i><a href="mailto:halo@uikit-demo.id" class="fw-semibold">halo@uikit-demo.id</a></li>
+              <li><i class="fa-brands fa-whatsapp me-2 text-primary"></i><a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="fw-semibold">WhatsApp</a></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER PROFESIONAL ============ -->
+  <footer class="uk-footer-pro">
+    <div class="uk-container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="uk-footer-pro-brand mb-3">
+            <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+            <span>UI<span class="text-gradient"> KIT</span></span>
+          </div>
+          <p class="mb-0">UI KIT premium untuk kebutuhan Admin Proyek Lapangan — Bootstrap 5.3.8, FontAwesome, dan AOS dalam satu library.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Produk</h6>
+          <a href="landing.html#fitur">Fitur</a>
+          <a href="landing.html#proyek">Proyek</a>
+          <a href="landing.html#galeri">Dokumentasi</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Kontak</h6>
+          <a href="https://wa.me/6281234567890"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp</a>
+          <a href="mailto:halo@uikit-demo.id"><i class="fa-solid fa-envelope me-2"></i>halo@uikit-demo.id</a>
+          <a href="#"><i class="fa-solid fa-location-dot me-2"></i>Jakarta, Indonesia</a>
+        </div>
+        <div class="col-lg-3">
+          <h6>Newsletter</h6>
+          <p class="small mb-3">Dapatkan info proyek, tips lapangan, dan pembaruan fitur langsung ke email Anda.</p>
+          <form class="d-flex gap-2" action="#" novalidate>
+            <label class="visually-hidden" for="nlEmail">Alamat email</label>
+            <input type="email" class="form-control form-control-sm" id="nlEmail" placeholder="Alamat email">
+            <button class="btn btn-gradient btn-sm flex-shrink-0" type="submit"><i class="fa-solid fa-paper-plane me-1"></i>Langganan</button>
+          </form>
+          <p class="small mb-0 mt-3"><i class="fa-solid fa-shield-halved me-1"></i>Tanpa spam — berhenti kapan saja.</p>
+        </div>
+      </div>
+    </div>
+    <div class="uk-footer-pro-bottom">
+      <div class="uk-container">© 2026 UI KIT — Admin Proyek Lapangan. Dibangun dengan Bootstrap 5.3.8, FontAwesome &amp; AOS. · <a href="privacy-policy.html">Kebijakan Privasi</a> · <a href="terms-conditions.html">Syarat &amp; Ketentuan</a></div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING GROUP ============ -->
+  <div class="uk-float-group">
+    <div class="dropdown uk-theme-switcher">
+      <button class="dropdown-toggle uk-fab uk-fab-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mode tampilan" title="Mode tampilan">
+        <i class="fa-solid fa-sun theme-icon-active"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow">
+        <li><h6 class="dropdown-header">Pilih Mode</h6></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="fa-solid fa-sun me-2"></i>Light</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="fa-solid fa-moon me-2"></i>Dark</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="auto"><i class="fa-solid fa-cloud-sun me-2"></i>Auto (Sistem)</a></li>
+      </ul>
+    </div>
+    <a href="https://wa.me/6281234567890" class="uk-wa" target="_blank" rel="noopener" aria-label="Hubungi via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#" class="uk-back-to-top" data-back-to-top aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+
+  <script src="dist/js/uikit.bundle.min.js"></script>
+</body>
+</html>

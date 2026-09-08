@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — UI KIT</title>
+  <meta name="description" content="Dashboard manajemen proyek lapangan UI KIT.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tema dark/light/auto diterapkan oleh bundel JS (blok color-mode M2) -->
+  <link href="dist/css/uikit.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg uk-navbar sticky-top" data-navbar>
+    <div class="container-fluid px-3 px-lg-4">
+      <div class="d-flex align-items-center gap-2">
+        <button class="uk-btn-icon" type="button" data-sidebar-toggle aria-label="Tampil/sembunyikan sidebar">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <a class="navbar-brand" href="landing.html">
+          <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+          <span class="uk-brand-text">UI<span class="text-gradient"> KIT</span></span>
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashTopNav" aria-controls="dashTopNav" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="dashTopNav">
+        <ul class="navbar-nav ms-auto">
+          <div class="uk-navbar-search">
+            <div class="uk-dt-search input-group">
+              <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="search" class="form-control" placeholder="Cari proyek, tugas..." aria-label="Cari" data-dt-search>
+            </div>
+          </div>
+          <li class="nav-item dropdown">
+            <button class="nav-link" href="#" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifikasi"><i class="fa-solid fa-bell"></i>
+              <span class="d-sm-inline fw-semibold">Notifikasi</span>
+              <span class="badge rounded-pill text-bg-danger position-absolute translate-middle start-75 top-75">3</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+              <li><h6 class="dropdown-header"><i class="fa-solid fa-bell me-1"></i>Notifikasi</h6></li>
+              <li><a class="dropdown-item" href="#"><span class="uk-dot me-2"></span>Foto baru diunggah</a></li>
+              <li><a class="dropdown-item" href="#"><span class="uk-dot me-2 bg-info"></span>Rapat progres besok</a></li>
+              <li><a class="dropdown-item" href="#"><span class="uk-dot me-2 bg-warning"></span>Laporan siap ditinjau</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="nav-link d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="fw-semibold">Andi R.</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><h6 class="dropdown-header">Akun</h6></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2 text-muted"></i>Profil</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2 text-muted"></i>Pengaturan</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="login.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Keluar</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ WRAPPER: SIDEBAR + MAIN ============ -->
+  <div class="uk-wrapper">
+
+    <!-- Sidebar (satu markup: rail desktop + drawer mobile via CSS media query) -->
+    <aside class="uk-sidebar" data-sidebar>
+      <div class="uk-sidebar-header d-lg-none">
+        <a class="navbar-brand" href="landing.html">
+          <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+          <span class="uk-brand-text">UI<span class="text-gradient"> KIT</span></span>
+        </a>
+        <button class="uk-btn-icon uk-btn-icon-sm" type="button" data-sidebar-toggle aria-label="Tutup sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="uk-sidebar-body">
+        <nav>
+          <div class="uk-menu-group-title">Utama</div>
+          <a class="uk-menu-item active" href="dashboard.html"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+          <a class="uk-menu-item" href="#"><i class="fa-solid fa-table-columns"></i><span>Kanban</span></a>
+          <a class="uk-menu-item" href="#"><i class="fa-solid fa-calendar-days"></i><span>Kalender</span></a>
+          <a class="uk-menu-item" href="#"><i class="fa-solid fa-chart-gantt"></i><span>Gantt Chart</span></a>
+          <div class="uk-menu-group-title">Manajemen</div>
+          <div class="uk-menu-item" data-submenu-toggle role="button" tabindex="0" aria-expanded="false">
+            <i class="fa-solid fa-folder-tree"></i><span>Proyek</span><i class="fa-solid fa-chevron-right submenu-arrow"></i>
+          </div>
+          <ul class="uk-submenu">
+            <li><a class="uk-menu-item" href="#"><i class="fa-solid fa-circle fa-2xs"></i><span>Aktif</span></a></li>
+            <li><a class="uk-menu-item" href="#"><i class="fa-solid fa-circle fa-2xs"></i><span>Selesai</span></a></li>
+            <li><a class="uk-menu-item" href="#"><i class="fa-solid fa-circle fa-2xs"></i><span>Ditunda</span></a></li>
+          </ul>
+          <div class="uk-menu-group-title">Lainnya</div>
+          <a class="uk-menu-item" href="_test-component.html"><i class="fa-solid fa-layer-group"></i><span>Dokumentasi</span></a>
+          <a class="uk-menu-item" href="landing.html"><i class="fa-solid fa-house"></i><span>Landing</span></a>
+        </nav>
+      </div>
+      <div class="uk-sidebar-footer d-none d-lg-block"><i class="fa-solid fa-circle-info me-2"></i>UI KIT v1.0</div>
+    </aside>
+
+    <div class="uk-sidebar-overlay" data-sidebar-overlay></div>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="uk-main" data-main>
+      <div class="container-fluid px-3 px-lg-4 py-4 py-lg-5">
+
+        <div class="uk-page-title">
+          <div>
+            <nav class="uk-breadcrumb mb-1" aria-label="Breadcrumb">
+              <a href="landing.html"><i class="fa-solid fa-house me-1"></i>Beranda</a>
+              <span class="sep"><i class="fa-solid fa-chevron-right fa-xs"></i></span>
+              <span class="current">Dashboard</span>
+            </nav>
+            <h1>Selamat Datang, Andi</h1>
+            <p>Ringkasan aktivitas proyek lapangan Anda hari ini.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-soft-primary" type="button" data-bs-toggle="modal" data-bs-target="#proyekBaru">
+              <i class="fa-solid fa-plus me-1"></i>Proyek Baru
+            </button>
+            <button class="btn btn-gradient" type="button" data-bs-toggle="offcanvas" data-bs-target="#widgetCanvas" aria-controls="widgetCanvas">
+              <i class="fa-solid fa-sliders me-1"></i>Widget
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6 col-xl-3">
+            <div class="card uk-stats-card"><div class="card-body">
+              <span class="uk-stats-icon"><i class="fa-solid fa-folder-tree"></i></span>
+              <div><div class="uk-stats-value" data-counter="24">0</div><div class="uk-stats-label">Proyek Aktif</div><div class="uk-stats-delta up"><i class="fa-solid fa-arrow-trend-up me-1"></i>12%</div></div>
+            </div></div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="card uk-stats-card"><div class="card-body">
+              <span class="uk-stats-icon bg-soft-info text-info"><i class="fa-solid fa-users"></i></span>
+              <div><div class="uk-stats-value" data-counter="68">0</div><div class="uk-stats-label">Anggota Tim</div><div class="uk-stats-delta up"><i class="fa-solid fa-arrow-trend-up me-1"></i>4%</div></div>
+            </div></div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="card uk-stats-card"><div class="card-body">
+              <span class="uk-stats-icon bg-soft-warning text-warning"><i class="fa-solid fa-camera"></i></span>
+              <div><div class="uk-stats-value" data-counter="412">0</div><div class="uk-stats-label">Dokumentasi Foto</div><div class="uk-stats-delta down"><i class="fa-solid fa-arrow-trend-down me-1"></i>2%</div></div>
+            </div></div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="card uk-stats-card"><div class="card-body">
+              <span class="uk-stats-icon bg-soft-success text-success"><i class="fa-solid fa-circle-check"></i></span>
+              <div><div class="uk-stats-value" data-counter="9">0</div><div class="uk-stats-label">Proyek Selesai</div><div class="uk-stats-delta up"><i class="fa-solid fa-arrow-trend-up me-1"></i>1</div></div>
+            </div></div>
+          </div>
+        </div>
+
+        <!-- Charts + Activity -->
+        <div class="row g-4 mb-4">
+          <div class="col-lg-8">
+            <div class="card uk-chart-card h-100">
+              <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <span class="fw-semibold">Ringkasan Progress</span>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="uk-chart-legend-item"><span class="uk-chart-legend-dot"></span>Pemasukan</span>
+                  <span class="uk-chart-legend-item"><span class="uk-chart-legend-dot bg-warning"></span>Pengeluaran</span>
+                </div>
+                <select class="form-select form-select-sm w-auto" aria-label="Periode">
+                  <option>7 hari</option>
+                  <option selected>30 hari</option>
+                  <option>90 hari</option>
+                </select>
+              </div>
+              <div class="card-body">
+                <div class="uk-chart-wrap uk-chart-live" data-chart='{"type":"area","labels":["W1","W2","W3","W4"],"series":[{"name":"Pemasukan","color":"#059669","values":[4.2,5.1,4.6,6.3]},{"name":"Pengeluaran","color":"#f59e0b","values":[3.1,3.8,3.4,4.2]}]}' aria-label="Grafik pemasukan dan pengeluaran">
+                  <canvas></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card h-100">
+              <div class="card-header fw-semibold">Aktivitas Terbaru</div>
+              <div class="card-body">
+                <ul class="uk-activity-feed">
+                  <li class="uk-activity-item"><span class="uk-activity-dot"></span><div><div class="uk-activity-title">Foto baru diunggah</div><div class="uk-activity-time">5 menit lalu</div></div></li>
+                  <li class="uk-activity-item"><span class="uk-activity-dot bg-warning"></span><div><div class="uk-activity-title">Laporan mingguan siap</div><div class="uk-activity-time">1 jam lalu</div></div></li>
+                  <li class="uk-activity-item"><span class="uk-activity-dot bg-info"></span><div><div class="uk-activity-title">Rapat progres besok</div><div class="uk-activity-time">3 jam lalu</div></div></li>
+                  <li class="uk-activity-item"><span class="uk-activity-dot"></span><div><div class="uk-activity-title">Kartu tugas dipindah</div><div class="uk-activity-time">Kemarin</div></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kanban -->
+        <div class="mb-4">
+          <h2 class="h5 fw-bold mb-3"><i class="fa-solid fa-table-columns me-2 text-primary"></i>Kanban Tugas</h2>
+          <div class="uk-kanban">
+            <div class="uk-kanban-col" data-kanban-column data-kanban-status="todo">
+              <div class="uk-kanban-header"><span class="uk-kanban-title"><i class="fa-solid fa-circle text-warning me-1"></i>Antrian</span><span class="uk-kanban-count" data-kanban-count>2</span></div>
+              <div class="uk-kanban-dropzone">
+                <div class="card uk-task-card" draggable="true"><div class="card-body py-2"><input class="form-check-input" type="checkbox" id="kb1"><label class="form-check-label ms-2" for="kb1"><span class="uk-task-title">Pengecekan material</span></label><div class="uk-task-meta"><span class="uk-task-tag badge-soft-info">Material</span><span class="uk-task-due">Batas: Jumat</span></div></div></div>
+                <div class="card uk-task-card" draggable="true"><div class="card-body py-2"><input class="form-check-input" type="checkbox" id="kb2"><label class="form-check-label ms-2" for="kb2"><span class="uk-task-title">Survei lokasi</span></label><div class="uk-task-meta"><span class="uk-task-tag badge-soft-warning">Survei</span><span class="uk-task-due overdue">Terlambat</span></div></div></div>
+              </div>
+            </div>
+            <div class="uk-kanban-col" data-kanban-column data-kanban-status="doing">
+              <div class="uk-kanban-header"><span class="uk-kanban-title"><i class="fa-solid fa-circle text-primary me-1"></i>Dikerjakan</span><span class="uk-kanban-count" data-kanban-count>2</span></div>
+              <div class="uk-kanban-dropzone">
+                <div class="card uk-task-card" draggable="true"><div class="card-body py-2"><input class="form-check-input" type="checkbox" id="kb3"><label class="form-check-label ms-2" for="kb3"><span class="uk-task-title">Dokumentasi foto</span></label><div class="uk-task-meta"><span class="uk-task-tag badge-soft-primary">Dokumentasi</span><span class="uk-task-due">Batas: Senin</span></div></div></div>
+                <div class="card uk-task-card" draggable="true"><div class="card-body py-2"><input class="form-check-input" type="checkbox" id="kb4"><label class="form-check-label ms-2" for="kb4"><span class="uk-task-title">Laporan progres</span></label><div class="uk-task-meta"><span class="uk-task-tag badge-soft-info">Laporan</span><span class="uk-task-due">Batas: Selasa</span></div></div></div>
+              </div>
+            </div>
+            <div class="uk-kanban-col" data-kanban-column data-kanban-status="done">
+              <div class="uk-kanban-header"><span class="uk-kanban-title"><i class="fa-solid fa-circle text-success me-1"></i>Selesai</span><span class="uk-kanban-count" data-kanban-count>1</span></div>
+              <div class="uk-kanban-dropzone">
+                <div class="card uk-task-card uk-task-done" draggable="true"><div class="card-body py-2"><input class="form-check-input" type="checkbox" id="kb5" checked><label class="form-check-label ms-2" for="kb5"><span class="uk-task-title">Perizinan</span></label><div class="uk-task-meta"><span class="uk-task-tag badge-soft-success">Selesai</span></div></div></div>
+              </div>
+            </div>
+          </div>
+          <p class="small text-muted mt-2 mb-0"><i class="fa-solid fa-keyboard me-1"></i>Alternatif keyboard: fokus kotak centang kartu lalu <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>←</kbd>/<kbd>→</kbd> untuk memindahkan antar kolom.</p>
+        </div>
+
+        <!-- Tabel Proyek -->
+        <div class="uk-datatable mb-4">
+          <div class="uk-dt-toolbar">
+            <div>
+              <h2 class="h6 fw-bold mb-0">Daftar Proyek</h2>
+              <span class="small text-muted">Data terkini dari lapangan</span>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <div class="uk-dt-search input-group d-none d-md-flex"><span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span><input type="search" class="form-control form-control-sm" placeholder="Cari proyek..." data-dt-search aria-label="Cari proyek"></div>
+              <button class="btn btn-sm btn-gradient" type="button"><i class="fa-solid fa-download me-1"></i>Ekspor</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover mb-0" data-dt-table>
+              <thead><tr><th data-sort>Proyek <span class="sort-indicator"><i class="fa-solid fa-sort"></i></span></th><th data-sort>Lokasi <span class="sort-indicator"><i class="fa-solid fa-sort"></i></span></th><th data-sort>Tim <span class="sort-indicator"><i class="fa-solid fa-sort"></i></span></th><th data-sort>Status <span class="sort-indicator"><i class="fa-solid fa-sort"></i></span></th><th>Progress</th></tr></thead>
+              <tbody>
+                <tr><td class="fw-semibold">Jembatan Desa Sukamaju</td><td>Sukamaju</td><td>6 orang</td><td><span class="badge badge-soft-primary">Aktif</span></td><td><div class="progress"><div class="progress-bar" data-progress="70"></div></div></td></tr>
+                <tr><td class="fw-semibold">Gedung Posyandu</td><td>Desa Melati</td><td>4 orang</td><td><span class="badge badge-soft-warning">Ditunda</span></td><td><div class="progress"><div class="progress-bar" data-progress="35"></div></div></td></tr>
+                <tr><td class="fw-semibold">Saluran Irigasi</td><td>Kec. Sari</td><td>8 orang</td><td><span class="badge badge-soft-success">Selesai</span></td><td><div class="progress"><div class="progress-bar" data-progress="100"></div></div></td></tr>
+                <tr><td class="fw-semibold">Gedung Serbaguna</td><td>Desa Karya</td><td>5 orang</td><td><span class="badge badge-soft-primary">Aktif</span></td><td><div class="progress"><div class="progress-bar" data-progress="45"></div></div></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="uk-dt-footer">
+            <span data-dt-count>Menampilkan 1–4 dari 4</span>
+            <ul class="pagination uk-pagination pagination-sm mb-0">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Foto Dokumentasi -->
+        <div class="mb-4">
+          <h2 class="h5 fw-bold mb-3"><i class="fa-solid fa-camera me-2 text-primary"></i>Dokumentasi Foto</h2>
+          <div class="uk-photo-doc">
+            <div class="uk-photo-item" data-lightbox><img src="assets/img/db1.svg" alt="Dokumentasi 1"><div class="uk-photo-caption">Pondasi — 12 Agu</div></div>
+            <div class="uk-photo-item" data-lightbox><img src="assets/img/db2.svg" alt="Dokumentasi 2"><div class="uk-photo-caption">Dinding — 19 Agu</div></div>
+            <div class="uk-photo-item" data-lightbox><img src="assets/img/db3.svg" alt="Dokumentasi 3"><div class="uk-photo-caption">Atap — 26 Agu</div></div>
+            <div class="uk-photo-item" data-lightbox><img src="assets/img/db4.svg" alt="Dokumentasi 4"><div class="uk-photo-caption">Finishing — 02 Sep</div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer simple -->
+      <footer class="uk-footer mt-auto">
+        <div class="container-fluid px-3 px-lg-4">
+          <span>© 2026 UI KIT — Admin Proyek Lapangan</span>
+          <span><a href="landing.html">Beranda</a> · <a href="_test-component.html">Dokumentasi</a> · <a href="privacy-policy.html">Kebijakan Privasi</a> · <a href="terms-conditions.html">Syarat &amp; Ketentuan</a></span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ============ MODAL PROYEK BARU ============ -->
+  <div class="modal fade" id="proyekBaru" tabindex="-1" aria-labelledby="proyekBaruLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title" id="proyekBaruLabel">Proyek Baru</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+        <div class="modal-body">
+          <div class="mb-3"><label class="form-label" for="pbNama">Nama proyek</label><input type="text" class="form-control" id="pbNama" placeholder="Nama proyek"></div>
+          <div class="mb-3"><label class="form-label" for="pbLokasi">Lokasi</label><input type="text" class="form-control" id="pbLokasi" placeholder="Kecamatan / desa"></div>
+          <div class="mb-3"><label class="form-label">Batas waktu</label><div class="uk-datepicker"><input type="date" class="form-control" aria-label="Tanggal"><i class="fa-solid fa-calendar-days uk-picker-icon"></i></div></div>
+        </div>
+        <div class="modal-footer"><button class="btn btn-soft-secondary btn-sm" type="button" data-bs-dismiss="modal">Batal</button><button class="btn btn-primary btn-sm" type="button">Simpan Proyek</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ OFF-CANVAS WIDGET ============ -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="widgetCanvas" aria-labelledby="widgetCanvasLabel">
+    <div class="offcanvas-header"><h5 class="offcanvas-title" id="widgetCanvasLabel">Pengaturan Widget</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button></div>
+    <div class="offcanvas-body">
+      <div class="form-check form-switch mb-3"><input class="form-check-input" type="checkbox" role="switch" id="wStat" checked><label class="form-check-label" for="wStat">Kartu Statistik</label></div>
+      <div class="form-check form-switch mb-3"><input class="form-check-input" type="checkbox" role="switch" id="wChart" checked><label class="form-check-label" for="wChart">Grafik Progress</label></div>
+      <div class="form-check form-switch mb-3"><input class="form-check-input" type="checkbox" role="switch" id="wKanban" checked><label class="form-check-label" for="wKanban">Kanban Tugas</label></div>
+      <div class="form-check form-switch mb-3"><input class="form-check-input" type="checkbox" role="switch" id="wFoto" checked><label class="form-check-label" for="wFoto">Dokumentasi Foto</label></div>
+      <button class="btn btn-gradient w-100" type="button"><i class="fa-solid fa-check me-1"></i>Simpan Pengaturan</button>
+    </div>
+  </div>
+
+  <!-- ============ FLOATING GROUP ============ -->
+  <div class="uk-float-group">
+    <div class="dropdown uk-theme-switcher">
+      <button class="dropdown-toggle uk-fab uk-fab-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mode tampilan" title="Mode tampilan">
+        <i class="fa-solid fa-sun theme-icon-active"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow">
+        <li><h6 class="dropdown-header">Pilih Mode</h6></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="fa-solid fa-sun me-2"></i>Light</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="fa-solid fa-moon me-2"></i>Dark</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="auto"><i class="fa-solid fa-cloud-sun me-2"></i>Auto (Sistem)</a></li>
+      </ul>
+    </div>
+    <a href="https://wa.me/6281234567890" class="uk-wa" target="_blank" rel="noopener" aria-label="Hubungi via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#" class="uk-back-to-top" data-back-to-top aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+
+  <script src="dist/js/uikit.bundle.min.js"></script>
+</body>
+</html>

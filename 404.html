@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — UI KIT</title>
+  <meta name="description" content="Halaman tidak ditemukan.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tema dark/light/auto diterapkan oleh bundel JS (blok color-mode M2) -->
+  <link href="dist/css/uikit.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg uk-navbar sticky-top" data-navbar>
+    <div class="container">
+      <a class="navbar-brand" href="landing.html">
+        <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+        <span class="uk-brand-text">UI<span class="text-gradient"> KIT</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fitur">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Dokumentasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Mulai</a></li>
+          <li class="nav-item"><a class="nav-link text-gradient" href="login.html"><i class="fa-solid fa-right-to-bracket me-1"></i>Masuk</a></li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mode tampilan" title="Mode tampilan">
+              <i class="fa-solid fa-sun theme-icon-active"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><h6 class="dropdown-header">Pilih Mode</h6></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="fa-solid fa-sun me-2"></i>Light</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="fa-solid fa-moon me-2"></i>Dark</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="auto"><i class="fa-solid fa-cloud-sun me-2"></i>Auto (Sistem)</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+    <div class="uk-auth-wrap">
+      <div class="uk-auth-panel text-center">
+        <p class="display-1 fw-black ls-tight text-gradient mb-2">404</p>
+        <h1 class="h3 fw-bold mb-2">Halaman Tidak Ditemukan</h1>
+        <p class="text-muted mb-4">Halaman yang Anda cari mungkin telah dipindahkan, dihapus, atau alamatnya salah ketik.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="landing.html" class="btn btn-gradient px-4"><i class="fa-solid fa-house me-1"></i>Kembali ke Beranda</a>
+          <a href="dashboard.html" class="btn btn-soft-primary px-4"><i class="fa-solid fa-gauge me-1"></i>Buka Dashboard</a>
+        </div>
+        <p class="small text-muted mt-4 mb-0"><a href="_test-component.html" class="fw-semibold text-primary">Lihat dokumentasi komponen</a> atau hubungi kami via <a href="https://wa.me/6281234567890" class="fw-semibold text-primary">WhatsApp</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER PROFESIONAL ============ -->
+  <footer class="uk-footer-pro">
+    <div class="uk-container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="uk-footer-pro-brand mb-3">
+            <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+            <span>UI<span class="text-gradient"> KIT</span></span>
+          </div>
+          <p class="mb-0">UI KIT premium untuk kebutuhan Admin Proyek Lapangan — Bootstrap 5.3.8, FontAwesome, dan AOS dalam satu library.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Produk</h6>
+          <a href="landing.html#fitur">Fitur</a>
+          <a href="landing.html#proyek">Proyek</a>
+          <a href="landing.html#galeri">Dokumentasi</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Kontak</h6>
+          <a href="https://wa.me/6281234567890"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp</a>
+          <a href="mailto:halo@uikit-demo.id"><i class="fa-solid fa-envelope me-2"></i>halo@uikit-demo.id</a>
+          <a href="#"><i class="fa-solid fa-location-dot me-2"></i>Jakarta, Indonesia</a>
+        </div>
+        <div class="col-lg-3">
+          <h6>Newsletter</h6>
+          <p class="small mb-3">Dapatkan info proyek, tips lapangan, dan pembaruan fitur langsung ke email Anda.</p>
+          <form class="d-flex gap-2" action="#" novalidate>
+            <label class="visually-hidden" for="nlEmail">Alamat email</label>
+            <input type="email" class="form-control form-control-sm" id="nlEmail" placeholder="Alamat email">
+            <button class="btn btn-gradient btn-sm flex-shrink-0" type="submit"><i class="fa-solid fa-paper-plane me-1"></i>Langganan</button>
+          </form>
+          <p class="small mb-0 mt-3"><i class="fa-solid fa-shield-halved me-1"></i>Tanpa spam — berhenti kapan saja.</p>
+        </div>
+      </div>
+    </div>
+    <div class="uk-footer-pro-bottom">
+      <div class="uk-container">© 2026 UI KIT — Admin Proyek Lapangan. Dibangun dengan Bootstrap 5.3.8, FontAwesome &amp; AOS. · <a href="privacy-policy.html">Kebijakan Privasi</a> · <a href="terms-conditions.html">Syarat &amp; Ketentuan</a></div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING GROUP ============ -->
+  <div class="uk-float-group">
+    <div class="dropdown uk-theme-switcher">
+      <button class="dropdown-toggle uk-fab uk-fab-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mode tampilan" title="Mode tampilan">
+        <i class="fa-solid fa-sun theme-icon-active"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow">
+        <li><h6 class="dropdown-header">Pilih Mode</h6></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="fa-solid fa-sun me-2"></i>Light</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="fa-solid fa-moon me-2"></i>Dark</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="auto"><i class="fa-solid fa-cloud-sun me-2"></i>Auto (Sistem)</a></li>
+      </ul>
+    </div>
+    <a href="https://wa.me/6281234567890" class="uk-wa" target="_blank" rel="noopener" aria-label="Hubungi via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#" class="uk-back-to-top" data-back-to-top aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+
+  <script src="dist/js/uikit.bundle.min.js"></script>
+</body>
+</html>

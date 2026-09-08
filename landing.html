@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI KIT — Platform Manajemen Proyek Lapangan</title>
+  <meta name="description" content="UI KIT: kelola proyek lapangan — tugas, tim, dokumentasi foto, dan laporan dalam satu dashboard profesional.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tema dark/light/auto diterapkan oleh bundel JS (blok color-mode M2) -->
+  <link href="dist/css/uikit.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg uk-navbar sticky-top" data-navbar>
+    <div class="container">
+      <a class="navbar-brand" href="landing.html">
+        <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+        <span class="uk-brand-text">UI<span class="text-gradient"> KIT</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fitur">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Dokumentasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Mulai</a></li>
+          <li class="nav-item"><a class="nav-link text-gradient" href="login.html"><i class="fa-solid fa-right-to-bracket me-1"></i>Masuk</a></li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mode tampilan" title="Mode tampilan">
+              <i class="fa-solid fa-sun theme-icon-active"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><h6 class="dropdown-header">Pilih Mode</h6></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="fa-solid fa-sun me-2"></i>Light</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="fa-solid fa-moon me-2"></i>Dark</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-theme-value="auto"><i class="fa-solid fa-cloud-sun me-2"></i>Auto (Sistem)</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO (2 kolom: teks + media) ============ -->
+  <section id="beranda" class="uk-hero">
+    <div class="uk-bg-grid" aria-hidden="true"></div>
+    <div class="uk-container position-relative z-1 py-5 py-lg-6">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
+          <h1 class="display-5 fw-black ls-tight mb-3">
+            Kelola Proyek Lapangan<br>dalam Satu <span class="text-gradient">Dashboard</span>
+          </h1>
+          <p class="uk-section-subtitle mb-4">
+            Tugas, tim, dokumentasi foto, dan laporan — semuanya rapi, responsif, dan siap dipakai di lapangan.
+          </p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-5">
+            <a href="register.html" class="btn btn-gradient btn-lg px-4"><i class="fa-solid fa-user-plus me-2"></i>Daftar Gratis</a>
+            <a href="_test-component.html" class="btn btn-soft-primary btn-lg px-4"><i class="fa-solid fa-layer-group me-2"></i>Lihat Komponen</a>
+          </div>
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 border-top border-soft pt-4">
+            <div class="uk-avatar-stack">
+              <span class="uk-avatar uk-avatar-sm">AR</span>
+              <span class="uk-avatar uk-avatar-sm">BD</span>
+              <span class="uk-avatar uk-avatar-sm">CH</span>
+              <span class="uk-avatar uk-avatar-sm">DK</span>
+              <span class="uk-avatar uk-avatar-sm">EL</span>
+            </div>
+            <div class="text-center text-lg-start">
+              <div class="fw-semibold small">Dipercaya 68+ tim lapangan</div>
+              <div class="small text-muted"><i class="fa-solid fa-star text-warning me-1"></i>4.9/5 dari 200+ ulasan</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="uk-hero-media ms-lg-3">
+            <img src="assets/img/ukhero2.svg" class="img-fluid rounded-5 uk-shadow-lg border-soft border" alt="Tampilan dashboard UI KIT">
+            <div class="uk-float-chip" aria-hidden="true">
+              <span class="uk-chip-icon bg-soft-success text-success"><i class="fa-solid fa-circle-check"></i></span>
+              <div>
+                <div class="fw-bold lh-1">24 Proyek</div>
+                <div class="small text-muted">sedang berjalan</div>
+              </div>
+            </div>
+            <div class="uk-float-chip uk-float-chip-end" aria-hidden="true">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="uk-chip-icon bg-soft-info text-info"><i class="fa-solid fa-chart-line"></i></span>
+                <div>
+                  <div class="fw-bold small lh-1">Progres Rata-rata</div>
+                  <div class="small text-muted">30 hari terakhir</div>
+                </div>
+              </div>
+              <div class="progress mb-0"><div class="progress-bar" data-progress="78"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATISTIK ============ -->
+  <section class="uk-section uk-section-sm border-bottom border-soft">
+    <div class="uk-container">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3 uk-stat" data-aos="fade-up">
+          <div class="uk-stat-value" data-counter="24">0</div>
+          <div class="uk-stat-label">Proyek Aktif</div>
+        </div>
+        <div class="col-6 col-lg-3 uk-stat" data-aos="fade-up" data-aos-delay="100">
+          <div class="uk-stat-value" data-counter="1200">0</div>
+          <div class="uk-stat-label">Dokumentasi Foto</div>
+        </div>
+        <div class="col-6 col-lg-3 uk-stat" data-aos="fade-up" data-aos-delay="200">
+          <div class="uk-stat-value" data-counter="68">0</div>
+          <div class="uk-stat-label">Anggota Tim</div>
+        </div>
+        <div class="col-6 col-lg-3 uk-stat" data-aos="fade-up" data-aos-delay="300">
+          <div class="uk-stat-value" data-counter="9">0</div>
+          <div class="uk-stat-label">Proyek Selesai</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FITUR ============ -->
+  <section id="fitur" class="uk-section uk-section-sm">
+    <div class="uk-container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="uk-section-title mb-2">Fitur Unggulan</h2>
+        <p class="uk-section-subtitle mx-auto">Semua kebutuhan admin proyek lapangan tersedia sebagai komponen siap pakai.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card h-100 uk-feature">
+            <div class="card-body p-4">
+              <span class="uk-feature-icon"><i class="fa-solid fa-table-columns"></i></span>
+              <h5 class="fw-bold mb-2">Kanban &amp; Timeline</h5>
+              <p class="text-muted mb-0">Atur tugas harian dengan papan kanban drag-and-drop dan lihat riwayat timeline proyek.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 uk-feature">
+            <div class="card-body p-4">
+              <span class="uk-feature-icon bg-soft-info text-info"><i class="fa-solid fa-camera"></i></span>
+              <h5 class="fw-bold mb-2">Dokumentasi Foto</h5>
+              <p class="text-muted mb-0">Unggah dokumentasi lapangan dengan drag &amp; drop, lengkap dengan galeri dan lightbox.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 uk-feature">
+            <div class="card-body p-4">
+              <span class="uk-feature-icon bg-soft-warning text-warning"><i class="fa-solid fa-chart-gantt"></i></span>
+              <h5 class="fw-bold mb-2">Gantt &amp; Laporan</h5>
+              <p class="text-muted mb-0">Pantau jadwal dengan gantt chart dan hasilkan laporan progress secara konsisten.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card h-100 uk-feature">
+            <div class="card-body p-4">
+              <span class="uk-feature-icon bg-soft-danger text-danger"><i class="fa-solid fa-shield-halved"></i></span>
+              <h5 class="fw-bold mb-2">Peran &amp; Keamanan</h5>
+              <p class="text-muted mb-0">Kontrol akses per peran — supervisor, operator, dan admin dengan izin yang jelas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 uk-feature">
+            <div class="card-body p-4">
+              <span class="uk-feature-icon bg-soft-success text-success"><i class="fa-solid fa-bell"></i></span>
+              <h5 class="fw-bold mb-2">Notifikasi Real-time</h5>
+              <p class="text-muted mb-0">Tetap terinformasi — unggahan foto, laporan baru, dan tenggat tugas dalam satu feed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 uk-feature">
+            <div class="card-body p-4">
+              <span class="uk-feature-icon"><i class="fa-solid fa-circle-half-stroke"></i></span>
+              <h5 class="fw-bold mb-2">Tema Gelap &amp; Terang</h5>
+              <p class="text-muted mb-0">Mode light, dark, dan auto mengikuti sistem — nyaman digunakan kapan saja.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROYEK ============ -->
+  <section id="proyek" class="uk-section uk-section-sm bg-surface-alt">
+    <div class="uk-container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="uk-section-title mb-2">Proyek Terkini</h2>
+        <p class="uk-section-subtitle mx-auto">Contoh kartu proyek dengan progress, tim, dan status.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card uk-project-card">
+            <div class="uk-project-cover"><img src="assets/img/lp1.svg" alt="Proyek Jembatan Desa Sukamaju"><span class="badge badge-soft-primary">Aktif</span></div>
+            <div class="card-body">
+              <h5 class="uk-project-title mb-1">Jembatan Desa Sukamaju</h5>
+              <div class="uk-project-meta mb-3"><i class="fa-solid fa-location-dot"></i>Sukamaju · <i class="fa-solid fa-users"></i>6 orang</div>
+              <div class="progress mb-1"><div class="progress-bar" data-progress="70"></div></div>
+              <div class="d-flex justify-content-between small text-muted"><span>Progress</span><span>70%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card uk-project-card">
+            <div class="uk-project-cover"><img src="assets/img/lp2.svg" alt="Proyek Gedung Posyandu"><span class="badge badge-soft-warning">Ditunda</span></div>
+            <div class="card-body">
+              <h5 class="uk-project-title mb-1">Gedung Posyandu</h5>
+              <div class="uk-project-meta mb-3"><i class="fa-solid fa-location-dot"></i>Desa Melati · <i class="fa-solid fa-users"></i>4 orang</div>
+              <div class="progress mb-1"><div class="progress-bar" data-progress="35"></div></div>
+              <div class="d-flex justify-content-between small text-muted"><span>Progress</span><span>35%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card uk-project-card">
+            <div class="uk-project-cover"><img src="assets/img/lp3.svg" alt="Proyek Saluran Irigasi"><span class="badge badge-soft-success">Selesai</span></div>
+            <div class="card-body">
+              <h5 class="uk-project-title mb-1">Saluran Irigasi</h5>
+              <div class="uk-project-meta mb-3"><i class="fa-solid fa-location-dot"></i>Kec. Sari · <i class="fa-solid fa-users"></i>8 orang</div>
+              <div class="progress mb-1"><div class="progress-bar" data-progress="100"></div></div>
+              <div class="d-flex justify-content-between small text-muted"><span>Progress</span><span>100%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERI ============ -->
+  <section id="galeri" class="uk-section uk-section-sm">
+    <div class="uk-container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="uk-section-title mb-2">Dokumentasi Lapangan</h2>
+        <p class="uk-section-subtitle mx-auto">Galeri foto proyek dengan filter kategori dan lightbox.</p>
+      </div>
+      <div class="uk-gallery-filter justify-content-center mb-4" data-aos="fade-up">
+        <button class="btn btn-sm active" type="button" data-filter="all">Semua</button>
+        <button class="btn btn-sm" type="button" data-filter="konstruksi">Konstruksi</button>
+        <button class="btn btn-sm" type="button" data-filter="material">Material</button>
+        <button class="btn btn-sm" type="button" data-filter="tim">Tim</button>
+      </div>
+      <div class="uk-gallery" data-aos="fade-up">
+        <div class="uk-gallery-item" data-category="konstruksi" data-lightbox><img src="assets/img/lg1.svg" alt="Konstruksi 1"></div>
+        <div class="uk-gallery-item" data-category="material" data-lightbox><img src="assets/img/lg2.svg" alt="Material 1"></div>
+        <div class="uk-gallery-item" data-category="tim" data-lightbox><img src="assets/img/lg3.svg" alt="Tim 1"></div>
+        <div class="uk-gallery-item" data-category="konstruksi" data-lightbox><img src="assets/img/lg4.svg" alt="Konstruksi 2"></div>
+        <div class="uk-gallery-item" data-category="tim" data-lightbox><img src="assets/img/lg5.svg" alt="Tim 2"></div>
+        <div class="uk-gallery-item" data-category="material" data-lightbox><img src="assets/img/lg6.svg" alt="Material 2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA (2 kolom: ajakan + kartu daftar cepat) ============ -->
+  <section id="cta" class="uk-section uk-section-sm">
+    <div class="uk-container">
+      <div class="uk-cta" data-aos="zoom-in">
+        <div class="uk-cta-mark" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></div>
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-7 uk-cta-main">
+            <h2 class="display-6 fw-black ls-tight mb-3">Mulai Kelola Proyek<br>dengan Lebih <span class="text-decoration-underline">Rapi</span></h2>
+            <p class="uk-cta-sub mb-4">Daftar gratis dan rasakan kemudahan memantau tugas, tim, dan dokumentasi lapangan — langsung dari satu dashboard.</p>
+            <ul class="uk-cta-points mb-4">
+              <li><i class="fa-solid fa-check"></i>Setup 1 menit</li>
+              <li><i class="fa-solid fa-check"></i>Tanpa kartu kredit</li>
+              <li><i class="fa-solid fa-check"></i>Batal kapan saja</li>
+            </ul>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="register.html" class="btn btn-lg px-4"><i class="fa-solid fa-user-plus me-2"></i>Daftar Gratis</a>
+              <a href="login.html" class="btn btn-outline-light btn-lg px-4">Sudah punya akun? Masuk</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="uk-cta-card ms-lg-3">
+              <h3 class="h5 fw-bold mb-1">Mulai Gratis Hari Ini</h3>
+              <p class="small text-muted mb-3">Masukkan email — akun Anda siap dalam 1 menit.</p>
+              <form action="#" novalidate>
+                <div class="mb-2">
+                  <label class="visually-hidden" for="ctaEmail">Alamat email</label>
+                  <input type="email" class="form-control" id="ctaEmail" placeholder="nama@contoh.com">
+                </div>
+                <button class="btn btn-gradient w-100" type="submit"><i class="fa-solid fa-user-plus me-1"></i>Daftar Sekarang</button>
+              </form>
+              <div class="d-flex align-items-center gap-3 pt-3 mt-3 border-top border-soft">
+                <div class="uk-avatar-stack">
+                  <span class="uk-avatar uk-avatar-sm">AR</span>
+                  <span class="uk-avatar uk-avatar-sm">BD</span>
+                  <span class="uk-avatar uk-avatar-sm">CH</span>
+                  <span class="uk-avatar uk-avatar-sm">DK</span>
+                </div>
+                <div class="small text-muted">Dipercaya <strong class="fw-bold">68+</strong> tim lapangan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER PROFESIONAL ============ -->
+  <footer class="uk-footer-pro">
+    <div class="uk-container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="uk-footer-pro-brand mb-3">
+            <span class="uk-brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+            <span>UI<span class="text-gradient"> KIT</span></span>
+          </div>
+          <p class="mb-0">UI KIT premium untuk kebutuhan Admin Proyek Lapangan — Bootstrap 5.3.8, FontAwesome, dan AOS dalam satu library.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Produk</h6>
+          <a href="#fitur">Fitur</a>
+          <a href="#proyek">Proyek</a>
+          <a href="#galeri">Dokumentasi</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Kontak</h6>
+          <a href="https://wa.me/6281234567890"><i class="fa-brands fa-whatsapp me-2"></i>WhatsApp</a>
+          <a href="#"><i class="fa-solid fa-envelope me-2"></i>halo@uikit-demo.id</a>
+          <a href="#"><i class="fa-solid fa-location-dot me-2"></i>Jakarta, Indonesia</a>
+        </div>
+        <div class="col-lg-3">
+          <h6>Newsletter</h6>
+          <p class="small mb-3">Dapatkan info proyek, tips lapangan, dan pembaruan fitur langsung ke email Anda.</p>
+          <form class="d-flex gap-2" action="#" novalidate>
+            <label class="visually-hidden" for="nlEmail">Alamat email</label>
+            <input type="email" class="form-control form-control-sm" id="nlEmail" placeholder="Alamat email">
+            <button class="btn btn-gradient btn-sm flex-shrink-0" type="submit"><i class="fa-solid fa-paper-plane me-1"></i>Langganan</button>
+          </form>
+          <p class="small mb-0 mt-3"><i class="fa-solid fa-shield-halved me-1"></i>Tanpa spam — berhenti kapan saja.</p>
+        </div>
+      </div>
+    </div>
+    <div class="uk-footer-pro-bottom">
+      <div class="uk-container">© 2026 UI KIT — Admin Proyek Lapangan. Dibangun dengan Bootstrap 5.3.8, FontAwesome &amp; AOS. · <a href="privacy-policy.html">Kebijakan Privasi</a> · <a href="terms-conditions.html">Syarat &amp; Ketentuan</a></div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING GROUP ============ -->
+  <div class="uk-float-group">
+    <div class="dropdown uk-theme-switcher">
+      <button class="dropdown-toggle uk-fab uk-fab-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mode tampilan" title="Mode tampilan">
+        <i class="fa-solid fa-sun theme-icon-active"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow">
+        <li><h6 class="dropdown-header">Pilih Mode</h6></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="fa-solid fa-sun me-2"></i>Light</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="fa-solid fa-moon me-2"></i>Dark</a></li>
+        <li><a class="dropdown-item" href="#" data-bs-theme-value="auto"><i class="fa-solid fa-cloud-sun me-2"></i>Auto (Sistem)</a></li>
+      </ul>
+    </div>
+    <a href="https://wa.me/6281234567890" class="uk-wa" target="_blank" rel="noopener" aria-label="Hubungi via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#" class="uk-back-to-top" data-back-to-top aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+
+  <script src="dist/js/uikit.bundle.min.js"></script>
+</body>
+</html>
